@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "pnpm --filter=!@celebrai/web run build",
     "build": "rimraf .next && next build",
     "start": "next start",
     "lint": "next lint",
