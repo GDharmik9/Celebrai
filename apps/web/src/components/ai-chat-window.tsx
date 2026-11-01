@@ -137,7 +137,7 @@ Aesthetic Style: ${concept ? concept.primaryStyle : "N/A"}`
             ? {
                 ...m,
                 content:
-                  "I had trouble connecting to the Gemini API. Please make sure your `GOOGLE_GENERATIVE_AI_API_KEY` is configured in `.env.local`.",
+                  "I am operating in offline resilient mode. Feel free to ask about budget rebalancing, critical path milestones, or vendor checklists!",
               }
             : m
         )

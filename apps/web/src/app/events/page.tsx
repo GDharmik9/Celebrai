@@ -42,7 +42,7 @@ export default function EventsDashboardPage() {
           </p>
         </div>
 
-        <Link href="/events/new">
+        <Link href="/events/new?new=true">
           <Button className="gap-2 bg-violet-600 text-white shadow-sm hover:bg-violet-700">
             <PlusCircle className="h-4 w-4" />
             New Event
@@ -77,8 +77,8 @@ export default function EventsDashboardPage() {
               Try adjusting your search terms or create a new celebration.
             </p>
           </div>
-          <Link href="/events/new">
-            <Button size="sm" className="gap-1.5">
+          <Link href="/events/new?new=true">
+            <Button size="sm" className="gap-1.5 bg-violet-600 text-white hover:bg-violet-700">
               <PlusCircle className="h-4 w-4" />
               Create First Event
             </Button>
