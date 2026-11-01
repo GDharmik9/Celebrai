@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BudgetVector",
+  "description": "Dynamic budget vector representing event financial allocation with conservation constraints.",
+  "type": "object",
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "totalBudget": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "currency": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3,
+      "default": "INR"
+    },
+    "contingencyPercent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 30,
+      "default": 10
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "lastUpdatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lineItems": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "venue",
+              "catering",
+              "decor",
+              "entertainment",
+              "photography",
+              "videography",
+              "florals",
+              "transportation",
+              "staffing",
+              "marketing",
+              "technology",
+              "miscellaneous"
+            ]
+          },
+          "label": { "type": "string", "minLength": 1, "maxLength": 120 },
+          "estimatedAmount": { "type": "number", "minimum": 0 },
+          "actualAmount": { "type": "number", "minimum": 0 },
+          "currency": { "type": "string", "default": "INR" },
+          "notes": { "type": "string", "maxLength": 500 },
+          "locked": { "type": "boolean", "default": false }
+        },
+        "required": ["id", "category", "label", "estimatedAmount", "currency", "locked"]
+      }
+    }
+  },
+  "required": [
+    "eventId",
+    "totalBudget",
+    "currency",
+    "lineItems",
+    "contingencyPercent",
+    "version",
+    "lastUpdatedAt"
+  ]
+}
+

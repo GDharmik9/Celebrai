@@ -1,0 +1,38 @@
+{
+  "name": "@celebrai/pdf-export",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --external react --watch",
+    "lint": "eslint src/",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@celebrai/schemas": "workspace:*",
+    "@react-pdf/renderer": "^4.1.5",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@celebrai/tsconfig": "workspace:*",
+    "@celebrai/eslint-config": "workspace:*",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}

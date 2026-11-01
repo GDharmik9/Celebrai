@@ -1,0 +1,44 @@
+{
+  "name": "@celebrai/api-genai",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./clients": {
+      "types": "./dist/clients/index.d.ts",
+      "import": "./dist/clients/index.mjs",
+      "require": "./dist/clients/index.js"
+    },
+    "./prompts": {
+      "types": "./dist/prompts/index.d.ts",
+      "import": "./dist/prompts/index.mjs",
+      "require": "./dist/prompts/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup --format esm,cjs --dts",
+    "dev": "tsup --format esm,cjs --dts --watch",
+    "lint": "eslint src/",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@celebrai/schemas": "workspace:*",
+    "@google/genai": "^2.29.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@celebrai/tsconfig": "workspace:*",
+    "@celebrai/eslint-config": "workspace:*",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "rimraf": "^6.0.1"
+  }
+}
