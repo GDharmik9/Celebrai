@@ -20,11 +20,11 @@ const nextConfig = {
       },
     ],
   },
+  serverExternalPackages: ["@react-pdf/renderer", "@celebrai/pdf-export"],
   transpilePackages: [
     "@celebrai/ui",
     "@celebrai/schemas",
     "@celebrai/api-genai",
-    "@celebrai/pdf-export",
   ],
   experimental: {
     optimizePackageImports: ["lucide-react", "@celebrai/ui"],

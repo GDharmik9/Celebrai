@@ -67,7 +67,9 @@ function RunOfShowDocument({ timeline, eventName }: RunOfShowPDFProps) {
                 style={{
                   flexDirection: "row",
                   marginBottom: 6,
-                  borderLeft: `3pt solid ${PRIORITY_COLORS[m.priority] ?? COLORS.textMuted}`,
+                  borderLeftWidth: 3,
+                  borderLeftColor: PRIORITY_COLORS[m.priority] ?? COLORS.textMuted,
+                  borderLeftStyle: "solid",
                   paddingLeft: 8,
                 }}
               >

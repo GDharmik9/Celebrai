@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react,@react-pdf/renderer",
     "dev": "tsup src/index.ts --format esm,cjs --dts --external react --watch",
     "lint": "eslint src/",
     "type-check": "tsc --noEmit",

@@ -16,6 +16,7 @@
     "@celebrai/pdf-export": "workspace:*",
     "@celebrai/schemas": "workspace:*",
     "@celebrai/ui": "workspace:*",
+    "@react-pdf/renderer": "^4.1.5",
     "@google/genai": "^2.29.1",
     "ai": "^4.1.46",
     "lucide-react": "^0.468.0",

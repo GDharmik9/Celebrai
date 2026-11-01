@@ -105,7 +105,9 @@ function BudgetDocument({ budget, eventName }: BudgetPDFProps) {
             style={{
               ...styles.row,
               backgroundColor: i % 2 === 0 ? COLORS.white : "#FAFAFA",
-              borderBottom: `0.5pt solid ${COLORS.border}`,
+              borderBottomWidth: 0.5,
+              borderBottomColor: COLORS.border,
+              borderBottomStyle: "solid",
             }}
           >
             <Text style={{ ...styles.cell, textTransform: "capitalize" }}>
